@@ -5,9 +5,9 @@ const hero = {
 };
 const platforms = Array.from({ length: 50 }).map((el, i) => {
   const x = Math.random() * 250 - 60;
-  const y = 70 * (i - 10);
+  const y = 60 * (i - 20);
   const view = document.createElement('div');
-  const wrong = Math.random() < 0.2;
+  const wrong = Math.random() < 0.15;
 
   view.classList.add('game__platform');
   if (wrong) view.classList.add('game__platform--wrong')
