@@ -30,6 +30,9 @@ Object.keys(actions).forEach(action => {
 
   btn.addEventListener('mousedown', () => actions[action] = true);
   btn.addEventListener('mouseup', () => actions[action] = false);
+
+  btn.addEventListener('touchstart', () => actions[action] = true);
+  btn.addEventListener('touchend', () => actions[action] = false);
 });
 
 
