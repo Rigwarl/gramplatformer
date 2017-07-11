@@ -1,10 +1,10 @@
 const hero = {
-  x: 0,
+  x: 70,
   y: 170,
   view: document.querySelector('#game-hero'),
 };
 const platforms = Array.from({ length: 50 }).map((el, i) => {
-  const x = Math.random() * 250 - 60;
+  const x = Math.random() * 200 - 45;
   const y = 60 * (i - 20);
   const view = document.createElement('div');
   const wrong = Math.random() < 0.15;
@@ -38,7 +38,7 @@ let dist = 0;
 
 const checkCollision = platform =>
   !platform.wrong &&
-  hero.x + 60 > platform.x && hero.x < platform.x + 120 &&
+  hero.x + 60 > platform.x && hero.x < platform.x + 90 &&
   hero.y + 60 > platform.y + dist && hero.y + 60 < platform.y + dist + 15;
 
 platforms.forEach(platform => platformsContainer.appendChild(platform.view));
