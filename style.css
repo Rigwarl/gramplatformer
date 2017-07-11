@@ -4,6 +4,7 @@
   height: 400px;
   margin: 0 auto;
   border: 1px solid #000;
+  overflow: hidden;
 }
 
 .game__hero {
