@@ -1,0 +1,48 @@
+.game {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.game__hero {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  background-color: yellow;
+}
+
+.game__platforms-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.game__platform {
+  position: absolute;
+  width: 120px;
+  height: 15px;
+  background-color: green;
+}
+
+.game__platform--wrong {
+  background-color: red;
+}
+
+.game__gui {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.game__btn {
+  flex-grow: 1;
+}
