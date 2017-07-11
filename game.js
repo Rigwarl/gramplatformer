@@ -1,7 +1,7 @@
 const hero = {
   x: 0,
   y: 170,
-  view: document.querySelector('#hero'),
+  view: document.querySelector('#game-hero'),
 };
 const platforms = Array.from({ length: 50 }).map((el, i) => {
   const x = Math.random() * 250 - 60;
@@ -16,8 +16,8 @@ const platforms = Array.from({ length: 50 }).map((el, i) => {
 
   return { x, y, view, wrong };
 });
-const platformsContainer = document.querySelector('#platforms');
-const score = document.querySelector('#score');
+const platformsContainer = document.querySelector('#game-platforms');
+const score = document.querySelector('#game-score');
 
 const actions = {
   up: false,
