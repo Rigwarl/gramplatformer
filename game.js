@@ -1,10 +1,10 @@
 const hero = {
-  x: 70,
+  x: 95,
   y: 170,
   view: document.querySelector('#game-hero'),
 };
 const platforms = Array.from({ length: 50 }).map((el, i) => {
-  const x = Math.random() * 200 - 45;
+  const x = Math.random() * 250 - 45;
   const y = 60 * (i - 20);
   const view = document.createElement('div');
   const wrong = Math.random() < 0.15;
