@@ -4,7 +4,7 @@ const hero = {
   view: document.querySelector('#hero'),
 };
 const platforms = Array.from({ length: 50 }).map((el, i) => {
-  const x = Math.random() * 400 - 60;
+  const x = Math.random() * 250 - 60;
   const y = 70 * (i - 10);
   const view = document.createElement('div');
   const wrong = Math.random() < 0.2;
