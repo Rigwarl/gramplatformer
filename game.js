@@ -17,6 +17,7 @@ const platforms = Array.from({ length: 50 }).map((el, i) => {
   return { x, y, view, wrong };
 });
 const platformsContainer = document.querySelector('#platforms');
+const score = document.querySelector('#score');
 
 const actions = {
   up: false,
@@ -54,6 +55,7 @@ const tick = () => {
   dist += speed;
   platformsContainer.style.transform = `translateY(${dist}px)`;
   hero.view.style.transform = `translateX(${hero.x}px)`;
+  score.innerText = Math.floor(dist / 10);
   requestAnimationFrame(tick);
 };
 
