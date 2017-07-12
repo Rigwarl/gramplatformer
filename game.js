@@ -1,3 +1,7 @@
+fetch('level.json')
+  .then(res => res.json())
+  .then(res => console.log(res));
+
 const hero = {
   x: 95,
   y: 170,
