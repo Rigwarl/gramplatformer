@@ -48,12 +48,13 @@ platforms.forEach(platform => platformsContainer.appendChild(platform.view));
 const tick = () => {
   const collision = platforms.some(checkCollision);
 
-  speed = Math.max(speed - 0.1, -5);
+  speed -= 0.1;
   if (collision && speed < 0) speed = 0;
   if (actions.up && collision) speed += 6;
   if (actions.left) hero.x -= 2;
   if (actions.right) hero.x += 2;
 
+  speed = Math.min(Math.max(speed, -5), 6)
   dist += speed;
   platformsContainer.style.transform = `translateY(${dist}px)`;
   hero.view.style.transform = `translateX(${hero.x}px)`;
