@@ -19,21 +19,20 @@ const platforms = Array.from({ length: 50 }).map((el, i) => {
 const platformsContainer = document.querySelector('#game-platforms');
 const score = document.querySelector('#game-score');
 
+const keys = {
+  37: 'left',
+  38: 'up',
+  39: 'right',
+};
+
 const actions = {
   up: false,
   left: false,
   right: false,
 };
 
-Object.keys(actions).forEach(action => {
-  const btn = document.getElementById(action);
-
-  btn.addEventListener('mousedown', () => actions[action] = true);
-  btn.addEventListener('mouseup', () => actions[action] = false);
-
-  btn.addEventListener('touchstart', () => actions[action] = true);
-  btn.addEventListener('touchend', () => actions[action] = false);
-});
+window.addEventListener('keydown', e => actions[keys[e.keyCode]] = true);
+window.addEventListener('keyup', e => actions[keys[e.keyCode]] = false);
 
 
 let speed = 0;

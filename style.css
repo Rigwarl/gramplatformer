@@ -39,15 +39,3 @@ body {
 .game__platform--wrong {
   background-color: red;
 }
-
-.game__gui {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-}
-
-.game__btn {
-  flex-grow: 1;
-}
