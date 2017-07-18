@@ -100,7 +100,7 @@ const tick = () => {
 
   speed -= 0.15;
   if (collision && speed < 0) speed = 0;
-  if (actions.up && collision) speed += 6;
+  if (actions.up && collision && speed === 0) speed += 6;
   if (actions.left) hero.x -= 2;
   if (actions.right) hero.x += 2;
 
