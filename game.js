@@ -53,8 +53,7 @@ const platforms = leveldata.map(({ word, left, bottom, correct }) => {
 
 
 const hero = {
-  width: 60,
-  height: 60,
+  width: 34,
   x: 115,
   y: 170,
   view: document.querySelector('#game-hero'),
@@ -83,8 +82,8 @@ let dist = 0;
 
 const checkCollision = platform =>
   !platform.dead &&
-  hero.x + hero.width > platform.left && hero.x < platform.left + platform.view.offsetWidth &&
-  hero.y + dist > platform.bottom && hero.y + dist < platform.bottom + 20;
+  hero.x + 33 + hero.width > platform.left && hero.x + 33 < platform.left + platform.view.offsetWidth &&
+  hero.y + dist > platform.bottom && hero.y + dist < platform.bottom + 25;
 
 platforms.forEach(platform => platformsContainer.appendChild(platform.view));
 
