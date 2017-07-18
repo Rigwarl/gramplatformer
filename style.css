@@ -4,7 +4,7 @@ body {
 
 .game {
   position: relative;
-  width: 250px;
+  width: 320px;
   height: 400px;
   margin: 0 auto;
   border: 1px solid #000;
@@ -30,12 +30,12 @@ body {
 }
 
 .game__platform {
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: #ccc;
+  padding: 3px 14px;
   position: absolute;
-  width: 90px;
-  height: 15px;
-  background-color: green;
-}
-
-.game__platform--wrong {
-  background-color: red;
+  left: 0;
+  bottom: 0;
+  transition: all 3s;
 }
