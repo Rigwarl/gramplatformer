@@ -89,17 +89,16 @@ platforms.forEach(platform => platformsContainer.appendChild(platform.view));
 
 const tick = () => {
   const collisionPlat = platforms.find(checkCollision);
-  const collision = collisionPlat && collisionPlat.correct;
 
   if (collisionPlat && !collisionPlat.correct && speed < 0) {
-    collisionPlat.view.style.transform = 'translateY(1000px)';
+    collisionPlat.view.style.transform = 'translateY(5000px)';
     collisionPlat.view.style.opacity = 0;
     collisionPlat.dead = true;
   }
 
   speed -= 0.15;
-  if (collision && speed < 0) speed = 0;
-  if (actions.up && collision && speed === 0) speed += 6;
+  if (collisionPlat && speed < 0) speed = collisionPlat.correct ? 0 : -2;
+  if (actions.up && collisionPlat && speed === 0) speed += 6;
   if (actions.left) hero.x -= 2;
   if (actions.right) hero.x += 2;
 

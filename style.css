@@ -34,5 +34,5 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  transition: all 3s;
+  transition: all 10s;
 }
